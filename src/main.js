@@ -8,3 +8,5 @@ const store = new $App.Store();
 const _ = worker.start()
 
 entryPoint()
+
+// store.clear()

@@ -43,6 +43,7 @@ export default class Store extends Observable {
   loadFromPersistenceStorage(key, storage = Storages.localStorage) {
     const loadFromLocalStorage = key => {
       const db = JSON.parse(localStorage.getItem(this.appName))
+      console.table(db)
       return db[key]
     }
 
@@ -56,7 +57,7 @@ export default class Store extends Observable {
       case Storages.indexedDB:
         return loadFromIndexedDB(key)
       default:
-        throw new Error('유욯한 데이터베이스가 없습니다.')
+        throw new Error('유효한 데이터베이스가 없습니다.')
     }
   }
 
@@ -78,7 +79,7 @@ export default class Store extends Observable {
       case Storages.indexedDB:
         return removeAtIndexedDB(key)
       default:
-        throw new Error('유욯한 데이터베이스가 없습니다.')
+        throw new Error('유효한 데이터베이스가 없습니다.')
     }
   }
 
@@ -99,7 +100,7 @@ export default class Store extends Observable {
       case Storages.indexedDB:
         return clearIndexedDB()
       default:
-        throw new Error('유욯한 데이터베이스가 없습니다.')
+        throw new Error('유효한 데이터베이스가 없습니다.')
     }
   }
 
