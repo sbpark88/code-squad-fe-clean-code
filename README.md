@@ -22,7 +22,6 @@ npm run dev
 # msw 설치 후 Browser Integration
 npx msw init public/ -S
 ```
-
 ### Issues
 
 - vite.config.js 파일에 publicDir 설정 해도 public 인식이 안 되서 제거함.
@@ -42,7 +41,7 @@ npx msw init public/ -S
     - async, await 을 사용하면 다 해결이 될까?
 - [X] 새고로침 페이지 유지(~~아마도 Global Store 구현을 통해?~~) -> 라우터의 히스토리 사용
 - [X] Global Store 를 이용해 LocalStorage 사용하도록.
-- [ ] App Lifecycle: LocalStorage 를 활용해 Label 입력 상태에서 탭 또는 브라우저 종료 후 데이터 보존.
+- [X] App Lifecycle: LocalStorage 를 활용해 Label 입력 상태에서 탭 또는 브라우저 종료 후 데이터 보존.
 - [ ] Issue & Label 필터 기능 구현
 - [ ] 검색 기능에 디바운싱 적용
 - [ ] 검색 기능에 캐싱 적용(동일 데이터일 경우 렌더링 하지 않도록)

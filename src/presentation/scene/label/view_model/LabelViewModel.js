@@ -19,7 +19,8 @@ export default class LabelViewModel extends Observable {
   //          상위 호출 함수의 context 역시 async/await 를 이용해야한다.
   async getData(options) {
     const response = await this.model.fetchGetLabel()
-    this.notifyAll(response)
+    this.notify('renderLabelList', response)
+    this.notify('updateLabelStatus', response)
   }
 
   async postData(body, options) {
